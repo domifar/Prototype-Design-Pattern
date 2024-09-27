@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prototype_Design_Pattern
 {
-    class Person
+    class Person : Prototype
     {
         public string Name { get; set; }
         public int Age { get; set; }
@@ -17,7 +17,7 @@ namespace Prototype_Design_Pattern
             Age = person.Age;
         }
 
-        public Person Clone()
+        public Prototype Clone()
         {
             return new Person(this);
         }
